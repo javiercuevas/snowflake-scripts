@@ -1,0 +1,1 @@
+--https://snowflakechronicles.medium.com/mastering-the-snowflake-pipe-operator-real-world-use-cases-you-can-run-today-1105d03f1d9b
