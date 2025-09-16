@@ -1,4 +1,5 @@
 --https://medium.com/snowflake/how-to-reverse-engineer-a-complex-data-model-in-snowflake-57c022b00c2e
+--https://data-xtractor.com/model-xtractor/
 
 CREATE OR REPLACE DATABASE "IndianReserves";
 CREATE TABLE "Reserves" (
