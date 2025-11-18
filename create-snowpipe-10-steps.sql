@@ -99,6 +99,30 @@ create pipe if not exists my_pipe as
 copy into src.my_source_table from @my_stage;
 
 
+--https://docs.snowflake.com/en/sql-reference/sql/create-pipe
+
+CREATE PIPE mypipe_azure
+  AUTO_INGEST = TRUE
+  INTEGRATION = 'MYINT'
+  AS
+  COPY INTO snowpipe_db.public.mytable
+  FROM @snowpipe_db.public.mystage
+  FILE_FORMAT = (TYPE = 'JSON');
+
+
+--another sample:
+copy into source_and_table
+from @stage_name/table.csv.gz
+file_format = (
+	type = csv field_delimiter = ',' 
+	skip_header = 0 
+	parse_header = true 
+	error_on_column_count_mismatch = false 
+	field_optionally_enclosed_by='"'
+	)
+match_by_column_name = 'case_insensitive'
+
+
 ---------------------------------------------------------------------
 --9. Force a pipe refresh
 ---------------------------------------------------------------------
@@ -127,4 +151,5 @@ select
 from account_usage.copy_history h
 where table_name = 'MY_SOURCE_TABLE'
 group by 1
+
 order by 1;
