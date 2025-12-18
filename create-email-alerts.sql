@@ -1,0 +1,1 @@
+--https://medium.com/@amulyapanda/email-notification-in-snowflake-3a6755c58215
