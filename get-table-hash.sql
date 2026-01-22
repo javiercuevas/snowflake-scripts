@@ -1,0 +1,4 @@
+SELECT 
+ COUNT(*) AS row_count, 
+ HASH_AGG(HASH(*)) AS table_signature 
+FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION;
