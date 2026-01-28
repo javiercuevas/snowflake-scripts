@@ -1,0 +1,31 @@
+Git Commands:
+
+1) To initialize/start git
+	git init
+
+2) To clone the repository
+	git clone <repo-link>
+
+3) To switch to other branch if needed
+	git checkout -dev
+
+-- Now add/modify the content from any IDE or Desktop
+
+4) To view all the uncommitted changes
+	git status
+
+5) To add the changes after adding/modifying the content
+	git add .
+	
+6) To commit the changes
+	git commit -m "Comments"
+	
+7) To push the changes to Github
+	git push -- by default it pushesh the changes to the branch we are currently in
+	git push <branch-name> -- To push the changes to specified branch
+	
+8) To merge the changes to main/master branch 
+   git merge main/master 
+   
+(In genearl we may not have access to merge to main/master branch directly, so we have to create a pull request and get it approved by the lead or the one who has approval permission and then merge it to main/master branch)
+	

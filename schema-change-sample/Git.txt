@@ -1,0 +1,79 @@
+Git - Version Controlling Software
+Github - is a website to host remote repositories
+Github Desktop - UI for Git, instead of running commands from terminal
+
+Git components:
+1. Working directory
+2. Staging area
+3. Local directory
+4. Remote directory
+
+Working dir: Dir that contains untracked files.
+Staging area: Contains the files or changes yet to be committed.
+Local dir: Contains the committed files or changes and ready to be pushed to Remote dir.
+Remote dir: Dir that does't present in our system, it can be a remote server or cloud.
+
+Git Commands:
+To initialize Git: git init
+To know the status: git status
+To know the branch 
+
+Link with remote dir:
+git config --global user.email "janardhan520@gmail.com"
+git config --global user.name "janasgit2"
+git remote add origin https://github.com/janasgit2/code_repo1.git
+
+Working --> Staging - git add file_name (or) git add . (for all files)
+Staging --> Local - git commit -m "message indicates the changes"
+Local --> Remote - git push -u origin master
+
+----------------
+Create a branch to master with your own name
+Push changes to your own branch
+Create pull request: Pull request to your supervisor or lead to approve the changes
+Merge pull request: After approval changes will be merged to master branch.
+
+Merge conflict: When 2 or more people created branches same time and create pull request after changes.
+
+git checkout branch_a -> to switch to any existing branch brach_a
+git checkout -b branch_b -> to switch to a new brach branch_b
+git push --set-upstream origin branch_a -> to push the files to new branch 
+git merge origin/master -> to merge to master branch
+
+Fork: to fork(copy/clone) others repositories to your repo branch
+
+git clone repo_path
+then the same process continues
+---------------
+
+Git Commands:
+
+1) To initialize/start git
+	git init
+
+2) To clone the repository
+	git clone <repo-link>
+
+3) To switch to other branch if needed
+	git checkout -dev
+
+-- Now add/modify the content from any IDE or Desktop
+
+4) To view all the uncommitted changes
+	git status
+
+5) To add the changes after adding/modifying the content
+	git add .
+	
+6) To commit the changes
+	git commit -m "Comments"
+	
+7) To push the changes to Github
+	git push -- by default it pushesh the changes to the branch we are currently in
+	git push <branch-name> -- To push the changes to specified branch
+	
+8) To merge the changes to main/master branch 
+   git merge main/master 
+   
+(In genearl we may not have access to merge to main/master branch directly, so we have to create a pull request and get it approved by the lead or the one who has approval permission and then merge it to main/master branch)
+	
